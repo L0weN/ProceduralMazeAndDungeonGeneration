@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class MapLocation       
 {
@@ -14,10 +16,16 @@ public class MapLocation
 
 public class Maze : MonoBehaviour
 {
+    public List<MapLocation> directions = new List<MapLocation>() {
+                                            new MapLocation(1,0),
+                                            new MapLocation(0,1),
+                                            new MapLocation(-1,0),
+                                            new MapLocation(0,-1) };
     public int width = 30; //x length
     public int depth = 30; //z length
     public byte[,] map;
     public int scale = 6;
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,5 +68,32 @@ public class Maze : MonoBehaviour
                     wall.transform.position = pos;
                 }
             }
+    }
+
+    public int CountSquareNeighbours(int x, int z)
+    {
+        int count = 0;
+        if (x <= 0 || x >= width - 1 || z <= 0 || z >= depth - 1) return 5;
+        if (map[x - 1, z] == 0) count++;
+        if (map[x + 1, z] == 0) count++;
+        if (map[x, z + 1] == 0) count++;
+        if (map[x, z - 1] == 0) count++;
+        return count;
+    }
+
+    public int CountDiagonalNeighbours(int x, int z)
+    {
+        int count = 0;
+        if (x <= 0 || x >= width - 1 || z <= 0 || z >= depth - 1) return 5;
+        if (map[x - 1, z - 1] == 0) count++;
+        if (map[x + 1, z + 1] == 0) count++;
+        if (map[x - 1, z + 1] == 0) count++;
+        if (map[x + 1, z - 1] == 0) count++;
+        return count;
+    }
+
+    public int CountAllNeighbours(int x, int z)
+    {
+        return CountSquareNeighbours(x,z) + CountDiagonalNeighbours(x,z);
     }
 }

@@ -1,15 +1,17 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Crawler : Maze
 {
 
     public override void Generate()
     {
-        for (int i = 0; i < 2; i++)
-            CrawlV();
+        //for (int i = 0; i < 2; i++)
+       //    CrawlV();
 
-        for(int i = 0; i < 3; i++)
-            CrawlH();
+       //for(int i = 0; i < 3; i++)
+        //    CrawlH();
     }
 
     void CrawlV()
@@ -42,7 +44,7 @@ public class Crawler : Maze
                 x += Random.Range(0, 2);
             else
                 z += Random.Range(-1, 2);
-            done |= (x < 1 || x >= width-2 || z < 1 || z >= depth-2);
+            done |= (x < 1 || x >= width-1 || z < 1 || z >= depth-1);
         }
     }
 
