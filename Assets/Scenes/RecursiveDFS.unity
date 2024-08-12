@@ -518,6 +518,11 @@ MonoBehaviour:
   width: 30
   depth: 30
   scale: 6
+  straight: {fileID: 0}
+  crossroad: {fileID: 0}
+  corner: {fileID: 0}
+  tIntersection: {fileID: 0}
+  endpiece: {fileID: 0}
 --- !u!4 &1005088011
 Transform:
   m_ObjectHideFlags: 0
@@ -527,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 1005088009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38614383, y: -0.03619957, z: 1.5785751}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -548,6 +553,11 @@ MonoBehaviour:
   width: 30
   depth: 30
   scale: 6
+  straight: {fileID: 0}
+  crossroad: {fileID: 0}
+  corner: {fileID: 0}
+  tIntersection: {fileID: 0}
+  endpiece: {fileID: 0}
 --- !u!114 &1005088013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +573,11 @@ MonoBehaviour:
   width: 20
   depth: 20
   scale: 6
+  straight: {fileID: 0}
+  crossroad: {fileID: 0}
+  corner: {fileID: 0}
+  tIntersection: {fileID: 0}
+  endpiece: {fileID: 0}
 --- !u!114 &1005088014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +593,15 @@ MonoBehaviour:
   width: 30
   depth: 30
   scale: 6
+  straight: {fileID: 8986039068892957736, guid: d093dd650c0984742b913e628bac7110,
+    type: 3}
+  crossroad: {fileID: 1154434222612500506, guid: d4b02c8c1a4dab942a67957d3fd7ab78,
+    type: 3}
+  corner: {fileID: 7974116506712809095, guid: 99c0b1eec4e4f1547aeb59d1220df4f6, type: 3}
+  tIntersection: {fileID: 7991257476639609968, guid: 0734939e81c572c4184b67fe9bc0634a,
+    type: 3}
+  endpiece: {fileID: 6671321304491901759, guid: 356ce12032d497f47bfa68a075d8d575,
+    type: 3}
 --- !u!850595691 &1160735724
 LightingSettings:
   m_ObjectHideFlags: 0
